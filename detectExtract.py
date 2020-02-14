@@ -43,21 +43,24 @@ while(1):
         letter=chr(ord('A')+i)
         if isPluggedIn(letter):
             if d[letter]==0:
-                for filename in Path(letter+":\\").rglob('*.ppt'):
-                    try:
-                        print(os.path.basename(filename))
-                        print(filename)
-                        shutil.copyfile(filename,doc+'\\here\\'+str(os.path.basename(filename)))
-                    except:
-                        pl=1
+                try:
+                    for filename in Path(letter+":\\").rglob('*.ppt'):
+                        try:
+                            print(os.path.basename(filename))
+                            print(filename)
+                            shutil.copyfile(filename,doc+'\\here\\'+str(os.path.basename(filename)))
+                        except:
+                            pl=1
 
-                for filename in Path(letter+":\\").rglob('*.pptx'):
-                    try:
-                        print(os.path.basename(filename))
-                        print(filename)
-                        shutil.copyfile(filename,doc+'\\here\\'+str(os.path.basename(filename)))
-                    except:
-                        pol=1
+                    for filename in Path(letter+":\\").rglob('*.pptx'):
+                        try:
+                            print(os.path.basename(filename))
+                            print(filename)
+                            shutil.copyfile(filename,doc+'\\here\\'+str(os.path.basename(filename)))
+                        except:
+                            pol=1
+                except:
+                    pol=1
                 d[letter]=1
             else:
                 d[letter]=0
