@@ -6,7 +6,7 @@ Should work on all Windows versions, 32 bit and 64 bit. Tested on Windows 7 32 b
 
 **Instructions for use**
 
-Copy the entire folder containing the executable onto the target PC and run the executable "detectusb.exe". 
+Copy the entire folder containing the executable onto the target PC and run the executable "detectusb2.exe". 
 
 The process will run, copying all .ppt and .pptx files from inserted USBs till the PC is shutdown or the process is terminated.
 
